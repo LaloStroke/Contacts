@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&display=swap");
+
+.darkMode {
+  --colorPrimary: rgb(22, 22, 22);
+  --colorSecondary: rgb(28, 28, 28);
+  --textColor: #dbdbdb;
+}
+
+* {
+  font-family: "Fira Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  color: var(--textColor);
+}
+
+body {
+  min-height: 100vh;
+  background-color: transparent;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: calc(100vh - 4rem) 4rem;
+  grid-template-areas:
+    "content"
+    "header";
+  background-color: var(--colorPrimary);
+}
+
+.pageContainer {
+  min-height: 100vh;
+  grid-area: content;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template-areas: "header content";
+    grid-template-rows: 1fr;
+    grid-template-columns: 4rem calc(100vw - 4rem);
+  }
+  .pageContainer {
+    max-width: calc(100vw - 6rem);
+  }
+}

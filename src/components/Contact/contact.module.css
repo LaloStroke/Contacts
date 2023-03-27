@@ -1,0 +1,110 @@
+.contactDisplay {
+  position: relative;
+  display: flex;
+}
+.contact {
+  background-color: var(--colorSecondary);
+  height: 6rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 6rem 1fr 3rem;
+  border-radius: 1rem;
+  width: 100%;
+  transition-duration: 0.3s;
+  z-index: 3;
+  position: relative;
+}
+.active {
+  background-color: var(--colorSecondary);
+  height: 6rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 6rem 1fr 3rem;
+  border-radius: 1rem;
+  width: 80%;
+  transition-duration: 0.3s;
+}
+
+.imgContainer {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.img {
+  width: inherit;
+  object-fit: cover;
+}
+
+.info {
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+.data {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.icon {
+  width: 3rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.3s;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.activeIcon {
+  width: 4rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  transition-duration: 0.3s;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.editIcon {
+  background-color: transparent;
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 1.25rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.3s;
+}
+.editIconActive {
+  width: 4rem;
+  height: 6rem;
+  background-color: transparent;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 3rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.editIconActive:hover {
+  transform: translateY(-0.5rem);
+}
+
+@media (min-width: 768px) {
+  .active {
+    width: 89%;
+  }
+}

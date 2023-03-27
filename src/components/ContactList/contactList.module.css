@@ -1,0 +1,11 @@
+.contactList {
+  display: grid;
+  width: 100%;
+  padding: 2.5rem 1rem;
+  grid-template-rows: repeat(auto-fill, 6rem);
+  gap: 1rem;
+  grid-auto-flow: dense;
+  grid-auto-columns: 1fr;
+  margin: 0 auto;
+  max-width: 40rem;
+}
